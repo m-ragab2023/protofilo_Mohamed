@@ -455,6 +455,10 @@ form input:hover{
     footer .content-footer p{
         width: 100%;
     }
+    .about .container-texts p{
+        width: 100%;
+        line-height: 11px;
+    }
 }
 
 @media (min-width:576px)and (max-width:780px) {
