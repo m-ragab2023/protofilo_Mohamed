@@ -11,11 +11,56 @@
     padding: 0;
     box-sizing: border-box;
   }
+body{
+    scroll-behavior: smooth;
+
+}
+.btn-scroll{
+    width: 35px;
+    height: 35px;
+    border: none;
+    background-color: var(--primaryColor);
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    display: none;
+    border-radius: 10px;
+ 
+}
+
+
 html{
     font-family: "Josefin Sans", sans-serif;
     /* font-size: 16px; */
     color: var(--lightColor);
 }
+.parent{
+    width: 75px;
+    height: 40px;
+    border-radius: 12px 12px 12px 12px  ;
+    background-color: var(--lightColor);
+    position: relative;
+    z-index: 1;
+ 
+}
+.parent .child{
+    width: 30px;
+    height: 38px;
+    margin: 2px;
+    margin-bottom: 2px;
+    border-radius: 50%;
+    padding:10px ;
+    background-color: var(--primaryColor);
+    cursor: pointer;
+    position: absolute;
+    outline: none;  
+    border: none;
+
+    z-index: 0.7;
+}
+
+
+
 h1{
     font-size: 20px;
 }
@@ -148,7 +193,7 @@ h4{
 color: var(--primaryColor);
 }
 .about .container-texts p{
-    color: var(--secondaryColor);
+    color: var(--lightColor);
     letter-spacing: 1px;
     line-height: 1.8rem;
     font-size: 1rem;
@@ -430,7 +475,11 @@ form input:hover{
         justify-content: center;
         flex-wrap: wrap;
         gap: 1rem;
+        
     }
+    .projects .box-projects .card-projects{
+        margin: auto;
+    }    
     .skills .container-images{
             display: none;
     }
@@ -456,8 +505,8 @@ form input:hover{
         width: 100%;
     }
     .about .container-texts p{
-        width: 100%;
-        line-height: 11px;
+        width: fit-content;
+        
     }
 }
 
