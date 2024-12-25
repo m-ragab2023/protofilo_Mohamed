@@ -415,16 +415,11 @@ form input:hover{
     .home .btn{
         display: none;
     }
-    nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding-top: 0;
-        height: 82px;
-        background-color: var(--bgColor-1);
-        border-bottom: 1px solid var(--bgColor-2);
-        /* z-index: 100; */
+    :root{
+        --pading : 1.5rem;
+    }
+    html{
+        font-size: 13px;
     }
     
     nav > a{
