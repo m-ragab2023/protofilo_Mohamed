@@ -35,7 +35,7 @@ html{
     color: var(--lightColor);
 }
 .parent{
-    width: 75px;
+    width: 70px;
     height: 40px;
     border-radius: 12px 12px 12px 12px  ;
     background-color: var(--lightColor);
