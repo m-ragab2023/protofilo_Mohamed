@@ -11,6 +11,10 @@
     padding: 0;
     box-sizing: border-box;
   }
+*::selection{
+    background-color: orange;
+    color: black;
+}
 body{
     scroll-behavior: smooth;
 
@@ -87,6 +91,7 @@ h1{
     padding-right: var(--padding);
     display: flex;
     justify-content: space-between;
+    box-shadow: -5px 5px 3px #ff274b ;
 }
 .home nav ul li {
     list-style: none;
@@ -118,18 +123,18 @@ h1{
     border:  2px solid var(--primaryColor);
 }
 .home .content{
-
+    margin: auto;
     flex-grow: 1;
     padding: 0 var(--padding);
     display: flex;
     align-items: center;
+
 }
-/* .container-text{
-    position: relative;
-    bottom: 70px;
-} */
+
+
  h1{
-    font-style: 4.65rem;
+    
+    font-size: 4rem;
     margin: 1.7rem 0;
 }
 
@@ -138,6 +143,7 @@ h3{
     margin-bottom: 3.5rem;
 }
 h4{
+    margin-top: 33px;
     font-size: 1.25rem;
     letter-spacing: 0.12rem;
     color: var(--secondaryColor);
@@ -170,6 +176,7 @@ h4{
 .content .social img:hover{
     transform: scale(1.2);
 }
+
 /* Add style to section about */
 .about{
     background-color: var(--bgColor-2);
@@ -186,7 +193,7 @@ h4{
     width: 90%;
 }
 .about .container-texts{
-    width: 35%;
+    width: 55%;
 }
 .about .container-texts span{
     
@@ -241,7 +248,7 @@ h5{
 }
 .projects .box-projects{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 1;
 }
@@ -251,7 +258,12 @@ h5{
     margin: 5px;
     padding: 1.3rem  2rem;
     text-align: center;
+    transition: 4s;
     background-color: var(--bgColor-1);
+}
+.projects .box-projects .card-projects:hover{
+  transform: scale(1.1);
+  box-shadow: -10px 10px 5px var(--primaryColor), 10px -10px 5px var(--primaryColor);
 }
 .projects .box-projects .card-projects img{
     width: 80%;
@@ -271,6 +283,7 @@ h5{
     padding: var(--padding);
     display: flex;
     align-items: center;
+    border-top: #ff274b 2px solid;
     justify-content: space-between;
 }
 .skills .container-images{
@@ -344,6 +357,50 @@ footer .content-footer .end{
     background-color: var(--primaryColor);
 }
 
+/* add srtle to certificates*/
+.certificates{
+    background-color: var(--bgColor-2);
+    padding: var(--padding);
+    border-top: 2px solid var(--primaryColor) ;
+}
+.cer-title{
+    margin-bottom: 22px;
+}
+.cer-title h2 {
+    font-size: 33px;
+    text-align: center;
+    color: #ff274b;
+    margin: 12x 0;
+    
+}
+.cer-title h2 span:hover{
+    border-bottom: 2px var(--lightColor) solid;
+    border-top: 2px var(--lightColor) solid;
+}
+.box-certificate{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1;
+}
+.card{
+    width: 300px;
+    border-radius: 20px; 
+    margin: 10px;
+    padding: 1.3rem  2rem;
+    text-align: center;
+    background-color: var(--bgColor-1);
+    transition: 3s;
+}
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: -10px 10px  5px var(--primaryColor), 10px -10px 5px var(--primaryColor);
+}
+ .box-certificate .card img{
+    width: 100%;
+    border-radius: 19px;
+    margin-bottom: 18px;
+ }
 /* Add style to contact */
 .contact{
     padding: 2rem var(--padding);
@@ -437,6 +494,9 @@ form input:hover{
         height: 100vh;
         background: var(--bgColor-2);
     }
+ .home{
+    padding-bottom: 18px;
+ }
     nav ul.is-active{
         display: block;
     }
@@ -447,23 +507,36 @@ form input:hover{
     }
     .home .container-texts{
         bottom: 0em;
-;
+    
     }
     .home .social{
         margin-top: 70px;
+    }
+    h4{
+        margin-top: 44px;
     }
     h3{
         margin-top: 70px;
     }
     #menu span{
         display: block;
+        margin-bottom: 10px;
     }
-    .container-images{
-        display: none;
+    .about{
+        flex-direction: column;
     }
-    .container-texts{
+     .about .container-images{
+       width: 90%;
+    }
+    .about .container-images img{
         width: 100%;
     }
+    .about .container-texts{
+        width: 90%;
+    }
+    /* .container-texts{
+        width: 100%;
+    } */
     .Service .box{
         justify-content: center;
         flex-wrap: wrap;
@@ -521,7 +594,7 @@ form input:hover{
     nav {
         position: fixed;
         top: 0;
-        left: 0;
+        left: 0; 
         right: 0;
         padding-top: 0;
         height: 82px;
